@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
+
+    <title>Snapping For The World</title>
+
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Inline scripts are forbidden in Firefox OS apps (CSP restrictions),
+         so we use a script file. -->
+    <script src="app.js" defer></script>
+    <script src="GetCameraImg.js" defer></script>
+    <script src="GetCloudImg.js" defer></script>
+    <script src="storePicture.js" defer></script>
+    <script src="./bootstrap/js/bootstrap.min.js" ></script>
+ 
+  </head>
+
+ <body>
+	<div>
+		<!-- This code is in the public domain. Enjoy! -->
+		<h1 align="center"><span class="label label-info">Snapping For The World</span></h1>
+		<video  id="videoDisplay"   autoplay></video >
+		<div align="center">
+			<button  class='btn btn-lg btn-success button' type="button" id="startGetCameraImg" >拍攝相片</button >
+			<button  class='btn btn-lg btn-warning button' type="button" id="snapButton" >選擇相片</button >
+		</div>
+		<canvas id="img1"></canvas>
+		<table align="center">
+			<tr>
+			<td><img class="smallPicture" id="p1"  src="http://140.115.80.235/~JSproject/1.png" ></img></td>
+			<td><img class="smallPicture" id="p2" src="http://140.115.80.235/~JSproject/2.png" ></img></td>
+			<td><img class="smallPicture" id="p3" src="http://140.115.80.235/~JSproject/3.png" ></img></td>
+			</tr>
+			<tr>
+			<td><img class="smallPicture" id="p4" src="http://140.115.80.235/~JSproject/4.png" ></img></td>
+			<td><img class="smallPicture" id="p5" src="http://140.115.80.235/~JSproject/5.png" ></img></td>
+			<td><img class="smallPicture" id="p6" src="http://140.115.80.235/~JSproject/6.png" ></img></td>
+			</tr>
+		</table>
+		<div align="center">
+			<input class='btn btn-lg btn-primary button' type="button" id="storeButton" value="儲存相片"></input>
+		</div>
+	</div>
+ </body>
+
+</html>

@@ -1,0 +1,27 @@
+ body {
+        border: 1px solid black;
+      }
+#img1{
+margin-top:10px;
+width:100%;
+height:300px;
+background-color:#53E355;
+z-index:1;
+
+}
+.button{
+margin-top:15px;
+margin-bottom:15px;
+}
+.smallPicture{
+	width:90px;
+	height:75px;
+	margin:5px;
+}
+#videoDisplay{
+margin-top:20px;
+width:100%;
+height:300px;
+background-color:#000000;
+-moz-transform:rotate(270deg);
+}
