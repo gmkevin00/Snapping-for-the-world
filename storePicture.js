@@ -1,4 +1,4 @@
-'use strict';
+Ôªø'use strict';
 
 (function(exports) {
 	var StorePicture = function() {
@@ -7,7 +7,7 @@
 		
 		this.storeButton=document.getElementById('storeButton');
 		
-		this.storage = navigator.getDeviceStorage('pictures');
+		//this.storage = navigator.getDeviceStorage('pictures');
 		
 	};
 
@@ -18,6 +18,7 @@
 
 			
 			this.storeButton.addEventListener('click', function(event) {
+				//alert("ÂÑ≤Â≠òÊàêÂäü!");
 				this.store();
 							
 			}.bind(this));
@@ -25,18 +26,15 @@
 		store: function()
 		{
 			this.canvas.toBlob(function(blob) {
-			  var newImg = document.createElement("img"),
-				  url = URL.createObjectURL(blob);
-
-			  newImg.onload = function() {
-				//not successful now!!
-				alert("¿x¶s¶®•\!");
-				// no longer need to read the blob so it's revoked
-				URL.revokeObjectURL(url);
+				var sdcard = navigator.getDeviceStorage("pictures");
+				var file   = new Blob(["This is a text file."], {type: "text/plain"});
+				var request = sdcard.addNamed(blob, "my-file"+new Date().getTime()+".png");
+				request.onsuccess = function () {
+				  alert("ÂÑ≤Â≠òÊàêÂäühaha!");  
+				}
+				request.onerror = function () {
+				  console.log('Unable to write the file: ' + this.error);
 			  };
-
-			  newImg.src = url;
-			  document.body.appendChild(newImg);
 			});
 		
 		

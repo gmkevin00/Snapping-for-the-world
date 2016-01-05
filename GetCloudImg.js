@@ -21,10 +21,10 @@
 		addCloudImage: function(number)
 		{
 			var imageData = new Image();
-			imageData.src = 'http://140.115.80.235/~JSproject/'+number+'.png';
+			imageData.src = 'pic/'+number+'.png';
 			
 			imageData.onload = function() {			
-				this.context.globalAlpha=0.1;   // Full opacity
+				this.context.globalAlpha=0.5;   // Full opacity
 				this.context.drawImage(imageData,0,0,this.canvas.width,this.canvas.height);		
 			}.bind(this);
 		
